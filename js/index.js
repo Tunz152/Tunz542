@@ -5927,13 +5927,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    var zaloDiv = document.querySelector('.Zalo');  // Lấy phần tử có class "Zalo"
+    var zaloDiv = document.querySelector('.Zalo');
     
     zaloDiv.addEventListener('click', function () {
-        // Mở tệp zalo.html trong tab mới
-        window.open('zalo.html', '_blank');
+        // Đảm bảo đường dẫn chính xác để mở tệp zalo.html
+        window.open('https://tunz152.github.io/Tunz542/zalo.html', '_blank');
     });
 });
+
 
 // Thay đổi nội dung của phần tử có id "checkip_address" bằng thông tin đã cho
 function updateInfo(info) {
