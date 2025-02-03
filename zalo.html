@@ -7,39 +7,54 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Zalo - Bảo trì</title>
   <!-- Thêm favicon tại đây -->
-  <link rel="shortcut icon" href=".//img/zalo.png" type="image/x-icon"> <!-- Favicon cho trang này -->
+  <link rel="shortcut icon" href="./img/zalo.png" type="image/x-icon"> <!-- Favicon cho trang này -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* Cấu hình chung cho trang */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+      background: #2c3e50;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background: linear-gradient(135deg, #2C3E50, #4CA1AF);
     }
 
+    /* Bố cục container */
     .container {
       text-align: center;
-      padding: 40px;
+      padding: 50px;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      max-width: 500px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
       width: 100%;
+      transition: all 0.3s ease-in-out;
     }
 
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .container p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    /* Nút quay lại trang chủ */
     .btn-home {
       display: inline-block;
       background-color: #FF5733;
       color: white;
-      padding: 12px 24px;
+      padding: 15px 30px;
       font-size: 18px;
-      border-radius: 5px;
+      border-radius: 30px;
       text-decoration: none;
       margin-top: 20px;
       cursor: pointer;
@@ -49,13 +64,38 @@
     .btn-home:hover {
       background-color: #ff704d;
     }
+
+    .container img {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+
+      .container h1 {
+        font-size: 28px;
+      }
+
+      .container p {
+        font-size: 16px;
+      }
+
+      .btn-home {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <img src="./img/zalo.png" alt="Zalo Logo">
     <h1>Trang Zalo này đang trong quá trình bảo trì</h1>
-    <p>Xin lỗi, chúng tôi đang cập nhật. Vui lòng quay lại sau.</p>
+    <p>Xin lỗi, chúng tôi đang thực hiện bảo trì hệ thống. Vui lòng quay lại sau!</p>
     
     <!-- Nút quay lại trang chủ -->
     <a href="https://tunz152.github.io/Tunz542/" class="btn-home">Quay lại trang chủ</a>
