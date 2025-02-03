@@ -5927,9 +5927,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    var telegramDiv = document.querySelector('.Zalo');
-    telegramDiv.addEventListener('click', function () {
-        window.open('Zalo', '_blank');
+    var zaloDiv = document.querySelector('.Zalo');  // Lấy phần tử có class "Zalo"
+    
+    zaloDiv.addEventListener('click', function () {
+        // Mở tệp zalo.html trong tab mới
+        window.open('zalo.html', '_blank');
     });
 });
 
