@@ -13,48 +13,56 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #eaeaea; /* Màu nền trang chủ */
+      background: linear-gradient(45deg, #ff6b6b, #f7b731); /* Gradient background tươi sáng */
       font-family: 'Arial', sans-serif;
     }
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.9); /* Nền trong suốt để không quá rối mắt */
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-      max-width: 600px;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      transition: all 0.3s ease;
+    }
+    .container:hover {
+      transform: translateY(-10px); /* Thêm hiệu ứng hover nâng lên */
     }
     .content {
-      font-size: 3rem;
-      color: #2c3e50; /* Màu đậm nhưng dễ đọc */
+      font-size: 4rem;
+      color: #2c3e50;
       font-weight: bold;
       margin-bottom: 20px;
     }
     .message {
       font-size: 1.5rem;
-      color: #7f8c8d; /* Màu nhạt cho thông điệp phụ */
-      margin-bottom: 20px;
+      color: #7f8c8d;
+      margin-bottom: 30px;
     }
     .btn {
-      padding: 15px 30px;
-      background-color: #3498db; /* Màu xanh giống trang chủ */
+      padding: 15px 40px;
+      background-color: #3498db;
       color: white;
       font-size: 1.2rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
     .btn:hover {
-      background-color: #2980b9; /* Màu xanh tối hơn khi hover */
+      background-color: #2980b9;
+      transform: translateY(-5px);
+    }
+    .btn:active {
+      transform: translateY(2px);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="content">404 - Không có =))</div>
-    <div class="message">Trang bạn tìm không tồn tại. Hãy thử lại!</div>
-    <a href="/" class="btn">Quay lại Trang Chủ</a>
+    <div class="message">Trang bạn tìm không tồn tại. Hãy thử lại nhé!</div>
+    <a href="https://tunz152.github.io/Tunz542/" class="btn">Quay lại Trang Chủ</a>
   </div>
 </body>
 </html>
