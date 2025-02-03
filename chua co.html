@@ -9,58 +9,36 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(45deg, #ff6b6b, #f7b731); /* Màu nền gradient tươi sáng */
+      background: linear-gradient(45deg, #ff6b6b, #f7b731); /* Gradient background tươi sáng */
+      font-family: 'Arial', sans-serif;
     }
-    
     .container {
       text-align: center;
-      background-color: white;
-      padding: 40px;
+      background-color: #fff;
+      padding: 50px;
       border-radius: 15px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 550px;
-      animation: fadeIn 1s ease-out;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      transition: all 0.3s ease;
     }
-    
-    /* Hiệu ứng fade in cho toàn bộ container */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+    .container:hover {
+      transform: translateY(-10px); /* Thêm hiệu ứng hover nâng lên */
     }
-
     .content {
-      font-size: 5rem;
-      font-weight: bold;
+      font-size: 4rem;
       color: #2c3e50;
+      font-weight: bold;
       margin-bottom: 20px;
     }
-
     .message {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       color: #7f8c8d;
       margin-bottom: 30px;
-      line-height: 1.5;
     }
-
-    .error-img {
-      width: 180px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    /* Hiệu ứng khi di chuột vào hình ảnh */
-    .error-img:hover {
-      transform: rotate(15deg) scale(1.1); /* Quay và phóng to hình ảnh */
-      filter: brightness(1.2);
-    }
-
     .btn {
       padding: 15px 40px;
       background-color: #3498db;
@@ -71,23 +49,36 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
-
     .btn:hover {
       background-color: #2980b9;
       transform: translateY(-5px);
     }
-
     .btn:active {
       transform: translateY(2px);
     }
-
-    /* Thêm hiệu ứng sóng nhẹ cho nút */
-    .btn:focus {
-      outline: none;
+    .error-img {
+      width: 150px; /* Kích thước hình ảnh */
+      margin-top: 20px; /* Thêm khoảng cách từ dưới thông điệp */
+      transition: transform 0.3s ease, filter 0.3s ease; /* Thêm hiệu ứng chuyển động */
     }
 
-    .btn:active {
-      transform: scale(0.98);
+    /* Hiệu ứng khi di chuột vào hình ảnh */
+    .error-img:hover {
+      transform: rotate(10deg) scale(1.1); /* Quay và phóng to */
+      filter: brightness(1.2); /* Làm sáng hình ảnh */
+    }
+
+    /* Hiệu ứng rung cho hình ảnh */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .error-img.shake {
+      animation: shake 0.5s ease-in-out;
     }
   </style>
 </head>
@@ -95,11 +86,21 @@
   <div class="container">
     <div class="content">Error 404</div>
     <div class="message">Trang này không tồn tại hoặc đang được cập nhật. Hãy thử lại sau!</div>
-    
-    <!-- Hình ảnh báo lỗi -->
-    <img src="img/error-404.png" alt="Error 404" class="error-img">
-
     <a href="https://tunz152.github.io/Tunz542/" class="btn">Quay lại Trang Chủ</a>
+    
+    <!-- Hình ảnh báo lỗi với hiệu ứng rung -->
+    <img src="img/error-404.png" alt="Error 404" class="error-img" id="errorImage">
   </div>
+
+  <script>
+    // Tạo hiệu ứng rung cho hình ảnh khi trang được tải
+    const errorImage = document.getElementById('errorImage');
+    setInterval(() => {
+      errorImage.classList.add('shake');
+      setTimeout(() => {
+        errorImage.classList.remove('shake');
+      }, 500);
+    }, 3000); // Hình ảnh sẽ rung mỗi 3 giây
+  </script>
 </body>
 </html>
