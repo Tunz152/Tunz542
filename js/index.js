@@ -5983,7 +5983,7 @@ console.log('%c- Đó là hành vi không tốt, cần source inbox facebook đ�
 document.addEventListener('DOMContentLoaded', function () {
     var overlay = document.getElementById('overlay');
     var text = document.getElementById('text');
-    var audio = new Audio('./audio/TienMinhMusic.mp3');
+    var audio = new Audio('./audio/AnhTuc-TaiLe-6132956.mp3');
 
     overlay.addEventListener('click', function () {
         audio.loop = true;
