@@ -5905,7 +5905,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Facebook');
     telegramDiv.addEventListener('click', function () {
-        window.open('https://www.facebook.com/trung.hieu.253907/', '_blank');
+        window.open('facebook.com', '_blank');
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -5917,13 +5917,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Tiktok');
     telegramDiv.addEventListener('click', function () {
-        window.open('https://www.tiktok.com/@lth17120_', '_blank');
+        window.open('tiktok.com', '_blank');
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Youtube');
     telegramDiv.addEventListener('click', function () {
-        window.open('https://www.youtube.com/@Dylan17121', '_blank');
+        window.open('youtube', '_blank');
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
