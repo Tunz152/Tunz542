@@ -58,17 +58,49 @@
     }
     .error-img {
       width: 150px; /* Kích thước hình ảnh */
-      margin-bottom: 20px;
+      margin-top: 20px; /* Thêm khoảng cách từ dưới thông điệp */
+      transition: transform 0.3s ease, filter 0.3s ease; /* Thêm hiệu ứng chuyển động */
+    }
+
+    /* Hiệu ứng khi di chuột vào hình ảnh */
+    .error-img:hover {
+      transform: rotate(10deg) scale(1.1); /* Quay và phóng to */
+      filter: brightness(1.2); /* Làm sáng hình ảnh */
+    }
+
+    /* Hiệu ứng rung cho hình ảnh */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .error-img.shake {
+      animation: shake 0.5s ease-in-out;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Hình ảnh báo lỗi 404 từ thư mục img -->
-    <img src="img/error-404.png" alt="Error 404" class="error-img">
     <div class="content">Error 404</div>
     <div class="message">Trang này không tồn tại hoặc đang được cập nhật. Hãy thử lại sau!</div>
     <a href="https://tunz152.github.io/Tunz542/" class="btn">Quay lại Trang Chủ</a>
+    
+    <!-- Hình ảnh báo lỗi với hiệu ứng rung -->
+    <img src="img/error-404.png" alt="Error 404" class="error-img" id="errorImage">
   </div>
+
+  <script>
+    // Tạo hiệu ứng rung cho hình ảnh khi trang được tải
+    const errorImage = document.getElementById('errorImage');
+    setInterval(() => {
+      errorImage.classList.add('shake');
+      setTimeout(() => {
+        errorImage.classList.remove('shake');
+      }, 500);
+    }, 3000); // Hình ảnh sẽ rung mỗi 3 giây
+  </script>
 </body>
 </html>
