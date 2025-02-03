@@ -5931,7 +5931,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     zaloDiv.addEventListener('click', function () {
         // Đảm bảo đường dẫn chính xác để mở tệp zalo.html
-     window.open('https://tunz152.github.io/Tunz542/Zalo', '_blank');
+     window.open('https://tunz152.github.io/Tunz542/zalo', '_blank');
     });
 });
 
