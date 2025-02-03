@@ -5892,14 +5892,14 @@ show_date_time();
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Telegram');
     telegramDiv.addEventListener('click', function () {
-        window.open('chua co.html', '_blank');
+        window.open('Telegram', '_blank');
     });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Github');
     telegramDiv.addEventListener('click', function () {
-        window.open('https://github.com/luonghieu17', '_blank');
+        window.open('https://github.com/Tunz152', '_blank');
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -5911,7 +5911,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Instagram');
     telegramDiv.addEventListener('click', function () {
-        window.open('https://www.instagram.com/lth_.17/', '_blank');
+        window.open('Instagram', '_blank');
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -5929,7 +5929,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var telegramDiv = document.querySelector('.Zalo');
     telegramDiv.addEventListener('click', function () {
-        window.open('chua co.html', '_blank');
+        window.open('Zalo', '_blank');
     });
 });
 
